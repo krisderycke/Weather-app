@@ -4,10 +4,12 @@ function getWeather() {
   let button = document.getElementById("search");
   button.addEventListener("click", async function(e) {
     let city = document.getElementById("input").value;
-
     let link = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${key}`;
     let response = await axios.get(link);
-    console.log(response.data);
+    let result = document.getElementById("result");
+    console.log(response.data.list[0].main);
+
+    result.innerHTML = response.data.list[0].main.temp_max;
   });
 }
 getWeather();
