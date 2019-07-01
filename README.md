@@ -1,5 +1,5 @@
 # Weather-app
-Link to my weather app is found [here](https://krisderycke.github.io/Weather-app/).
+Link to my weather app is found [here](https://krisderycke.github.io/Weather-app/index.html).
 
 ## What:
 I have to make a weather app using API keys.
