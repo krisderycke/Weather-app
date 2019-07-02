@@ -12,10 +12,10 @@ function getWeather() {
     console.log(response.data.list[0].main.temp);
     let weather = response.data.list[0].main;
 
-    document.getElementById("current").innerHTML = weather.temp;
-    document.getElementById("min").innerHTML = weather.temp_min;
-    document.getElementById("max").innerHTML = weather.temp_max;
-    document.getElementById("humidity").innerHTML = weather.humidity;
+    document.getElementById("current").innerHTML += weather.temp + " °C";
+    document.getElementById("min").innerHTML += weather.temp_min + " °C";
+    document.getElementById("max").innerHTML += weather.temp_max + " °C";
+    document.getElementById("humidity").innerHTML += weather.humidity + " %";
 
     // result.innerHTML = response.data.list[0].main.temp_max;
   });
