@@ -7,7 +7,7 @@ function getWeather() {
     let link = `http://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${key}&unit=metrics`;
     let response = await axios.get(link);
 
-    // console.log(response.data);
+    //console.log(response.data.list);
     // console.log(response.data.list[0].main);
     // console.log(response.data.list[0].main.temp);
     // console.log(response.data.list[8].main.temp);
@@ -32,14 +32,24 @@ function getWeather() {
     let max = document.getElementsByClassName("max");
     let humidity = document.getElementsByClassName("humidity");
     for (let i = 0; i < response.data.list.length; i += 8) {
-      console.log(response.data.list[i].main); // shows the data for the 5 days (the +8 is because you have 40elements. 40 divided by 5 days is 8)
-      week.push(response.data.list[i].main); // pushes the 5days items into 1 array
+      //   console.log(response.data.list[i].main); // shows the data for the 5 days (the +8 is because you have 40elements. 40 divided by 5 days is 8)
+      week.push(response.data.list[i].main); // pushes the 5days weather details into 1 array
+    }
+    console.log(week[0]);
+    dayOne.push(week[0]);
+    dayTwo.push(week[1]);
+    dayThree.push(week[2]);
+    dayFour.push(week[3]);
+    dayFive.push(week[4]);
+    console.log(dayOne[0].temp);
+    console.log(dayTwo[0].temp);
+    console.log(dayThree[0].temp);
+    console.log(dayFour[0].temp);
+    console.log(dayFive[0].temp);
 
-      dayOne.push(week[0]);
-      dayTwo.push(week[1]);
-      dayThree.push(week[2]);
-      dayFour.push(week[3]);
-      dayFive.push(week[4]);
+    for (let i = 0; i < current.length; i++) {
+      const element = current[i];
+      element.innerHTML += dayOne[0].temp;
     }
   });
 }
