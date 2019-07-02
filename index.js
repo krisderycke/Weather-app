@@ -20,8 +20,12 @@ function getWeather() {
     // document.getElementById("min").innerHTML += weather.temp_min + " °C";
     // document.getElementById("max").innerHTML += weather.temp_max + " °C";
     // document.getElementById("humidity").innerHTML += weather.humidity + " %";
-    let current = document.getElementsByClassName("list");
+    let current = document.getElementsByClassName("current");
+    let max = document.getElementsByClassName("max");
+    let humidity = document.getElementsByClassName("humidity");
     console.log(current);
+    console.log(max);
+    console.log(humidity);
     // result.innerHTML = response.data.list[0].main.temp_max;
   });
 }
