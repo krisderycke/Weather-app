@@ -28,9 +28,6 @@ function getWeather() {
     const dayFour = [];
     const dayFive = [];
 
-    let current = document.getElementsByClassName("current");
-    let max = document.getElementsByClassName("max");
-    let humidity = document.getElementsByClassName("humidity");
     for (let i = 0; i < response.data.list.length; i += 8) {
       //   console.log(response.data.list[i].main); // shows the data for the 5 days (the +8 is because you have 40elements. 40 divided by 5 days is 8)
       week.push(response.data.list[i].main); // pushes the 5days weather details into 1 array
@@ -47,10 +44,39 @@ function getWeather() {
     console.log(dayFour[0].temp);
     console.log(dayFive[0].temp);
 
-    for (let i = 0; i < current.length; i++) {
-      const element = current[i];
-      element.innerHTML += dayOne[0].temp;
-    }
+    let current1 = document.getElementById("current1");
+    let current2 = document.getElementById("current2");
+    let current3 = document.getElementById("current3");
+    let current4 = document.getElementById("current4");
+    let current5 = document.getElementById("current5");
+    let max1 = document.getElementById("max1");
+    let max2 = document.getElementById("max2");
+    let max3 = document.getElementById("max3");
+    let max4 = document.getElementById("max4");
+    let max5 = document.getElementById("max5");
+    let humidity1 = document.getElementById("humidity1");
+    let humidity2 = document.getElementById("humidity2");
+    let humidity3 = document.getElementById("humidity3");
+    let humidity4 = document.getElementById("humidity4");
+    let humidity5 = document.getElementById("humidity5");
+
+    current1.innerHTML += dayOne[0].temp + " °C";
+    current2.innerHTML += dayTwo[0].temp + " °C";
+    current3.innerHTML += dayThree[0].temp + " °C";
+    current4.innerHTML += dayFour[0].temp + " °C";
+    current5.innerHTML += dayFive[0].temp + " °C";
+
+    max1.innerHTML += dayOne[0].temp_max + " °C";
+    max2.innerHTML += dayTwo[0].temp_max + " °C";
+    max3.innerHTML += dayThree[0].temp_max + " °C";
+    max4.innerHTML += dayFour[0].temp_max + " °C";
+    max5.innerHTML += dayFive[0].temp_max + " °C";
+
+    humidity1.innerHTML += dayOne[0].humidity + " %";
+    humidity2.innerHTML += dayTwo[0].humidity + " %";
+    humidity3.innerHTML += dayThree[0].humidity + " %";
+    humidity4.innerHTML += dayFour[0].humidity + " %";
+    humidity5.innerHTML += dayFive[0].humidity + " %";
   });
 }
 getWeather();
