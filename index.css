@@ -29,3 +29,11 @@ body {
   list-style: none;
   padding: 10px;
 }
+i {
+  width: 10px;
+}
+li {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
