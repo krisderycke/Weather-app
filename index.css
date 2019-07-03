@@ -73,6 +73,7 @@ i {
   width: 10px;
 }
 li {
+  padding: 20px;
   width: 100px;
   display: flex;
   justify-content: space-around;

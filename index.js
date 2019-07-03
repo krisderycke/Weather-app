@@ -9,10 +9,35 @@ function getWeather() {
     let backgroundPicture = `https://api.unsplash.com/search/photos?client_id=14ae078181c4ac0c05e7c214aa7f14a9d0351d246345edf147276c0b60ce8cea&page=1&query=${city}`;
     let responseBg = await axios.get(backgroundPicture);
     let background =
-      responseBg.data.results[Math.floor(Math.random() * 10)].urls.full;
+      responseBg.data.results[Math.floor(Math.random() * 11)].urls.full;
     document.body.style.backgroundImage = `url('${background}')`;
     console.log(background);
     console.log(response);
+
+    let d = new Date();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+    let day = days[d.getDay()];
+    console.log(d);
+    console.log(days);
+    console.log(day);
+    // for (let i = 0; i < days.length; i++) {
+    //   if (i > 6) {
+    //     i = 0;
+    //   }
+    // }
+    document.getElementById("day0").innerHTML = days[3];
+    document.getElementById("day1").innerHTML = days[4];
+    document.getElementById("day2").innerHTML = days[5];
+    document.getElementById("day3").innerHTML = days[6];
+    document.getElementById("day4").innerHTML = days[0];
 
     //console.log(response.data.list);
     // console.log(response.data.list[0].main);
