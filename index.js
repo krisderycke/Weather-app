@@ -32,17 +32,21 @@ function getWeather() {
       //   console.log(response.data.list[i].main); // shows the data for the 5 days (the +8 is because you have 40elements. 40 divided by 5 days is 8)
       week.push(response.data.list[i].main); // pushes the 5days weather details into 1 array
     }
-    console.log(week[0]);
     dayOne.push(week[0]);
     dayTwo.push(week[1]);
     dayThree.push(week[2]);
     dayFour.push(week[3]);
     dayFive.push(week[4]);
-    console.log(dayOne[0].temp);
-    console.log(dayTwo[0].temp);
-    console.log(dayThree[0].temp);
-    console.log(dayFour[0].temp);
-    console.log(dayFive[0].temp);
+    console.log(week);
+
+    let lists = document.getElementsByTagName("li");
+    const listArray = [];
+    console.log(lists);
+    listArray.push(lists);
+    console.log(listArray);
+    listArray.forEach(element => {
+      console.log(element[0]);
+    });
 
     let current1 = document.getElementById("current1");
     let current2 = document.getElementById("current2");
