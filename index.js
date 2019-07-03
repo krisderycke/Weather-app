@@ -16,11 +16,6 @@ function getWeather() {
     // console.log(response.data.list[32].main.temp);
     // let weather = response.data.list[0].main;
 
-    // document.getElementById("current").innerHTML += weather.temp + " °C";
-    // document.getElementById("min").innerHTML += weather.temp_min + " °C";
-    // document.getElementById("max").innerHTML += weather.temp_max + " °C";
-    // document.getElementById("humidity").innerHTML += weather.humidity + " %";
-
     const week = [];
     const dayOne = [];
     const dayTwo = [];
@@ -39,15 +34,6 @@ function getWeather() {
     dayFive.push(week[4]);
     console.log(week);
 
-    let lists = document.getElementsByTagName("li");
-    const listArray = [];
-    console.log(lists);
-    listArray.push(lists);
-    console.log(listArray);
-    listArray.forEach(element => {
-      console.log(element[0]);
-    });
-
     let current1 = document.getElementById("current1");
     let current2 = document.getElementById("current2");
     let current3 = document.getElementById("current3");
@@ -64,23 +50,23 @@ function getWeather() {
     let humidity4 = document.getElementById("humidity4");
     let humidity5 = document.getElementById("humidity5");
 
-    current1.innerHTML += dayOne[0].temp + " °C";
-    current2.innerHTML += dayTwo[0].temp + " °C";
-    current3.innerHTML += dayThree[0].temp + " °C";
-    current4.innerHTML += dayFour[0].temp + " °C";
-    current5.innerHTML += dayFive[0].temp + " °C";
+    current1.innerHTML = dayOne[0].temp + " °C";
+    current2.innerHTML = dayTwo[0].temp + " °C";
+    current3.innerHTML = dayThree[0].temp + " °C";
+    current4.innerHTML = dayFour[0].temp + " °C";
+    current5.innerHTML = dayFive[0].temp + " °C";
 
-    max1.innerHTML += dayOne[0].temp_max + " °C";
-    max2.innerHTML += dayTwo[0].temp_max + " °C";
-    max3.innerHTML += dayThree[0].temp_max + " °C";
-    max4.innerHTML += dayFour[0].temp_max + " °C";
-    max5.innerHTML += dayFive[0].temp_max + " °C";
+    max1.innerHTML = dayOne[0].temp_max + " °C";
+    max2.innerHTML = dayTwo[0].temp_max + " °C";
+    max3.innerHTML = dayThree[0].temp_max + " °C";
+    max4.innerHTML = dayFour[0].temp_max + " °C";
+    max5.innerHTML = dayFive[0].temp_max + " °C";
 
-    humidity1.innerHTML += dayOne[0].humidity + " %";
-    humidity2.innerHTML += dayTwo[0].humidity + " %";
-    humidity3.innerHTML += dayThree[0].humidity + " %";
-    humidity4.innerHTML += dayFour[0].humidity + " %";
-    humidity5.innerHTML += dayFive[0].humidity + " %";
+    humidity1.innerHTML = dayOne[0].humidity + " %";
+    humidity2.innerHTML = dayTwo[0].humidity + " %";
+    humidity3.innerHTML = dayThree[0].humidity + " %";
+    humidity4.innerHTML = dayFour[0].humidity + " %";
+    humidity5.innerHTML = dayFive[0].humidity + " %";
   });
 }
 getWeather();
