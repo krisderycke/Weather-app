@@ -6,6 +6,12 @@ function getWeather() {
     let city = document.getElementById("input").value;
     let link = `http://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${key}&unit=metrics`;
     let response = await axios.get(link);
+    let backgroundPicture = `https://api.unsplash.com/search/photos?client_id=14ae078181c4ac0c05e7c214aa7f14a9d0351d246345edf147276c0b60ce8cea&page=1&query=${city}`;
+    let responseBg = await axios.get(backgroundPicture);
+    let background =
+      responseBg.data.results[Math.floor(Math.random() * 10)].urls.full;
+    document.body.style.backgroundImage = `url('${background}')`;
+    console.log(background);
     console.log(response);
 
     //console.log(response.data.list);
@@ -45,11 +51,12 @@ function getWeather() {
     let wind3 = document.getElementById("wind3");
     let wind4 = document.getElementById("wind4");
     let wind5 = document.getElementById("wind5");
-    // let humidity1 = document.getElementById("humidity1");
-    // let humidity2 = document.getElementById("humidity2");
-    // let humidity3 = document.getElementById("humidity3");
-    // let humidity4 = document.getElementById("humidity4");
-    // let humidity5 = document.getElementById("humidity5");
+    let icon1 = document.getElementById("icon1");
+    let icon2 = document.getElementById("icon2");
+    let icon3 = document.getElementById("icon3");
+    let icon4 = document.getElementById("icon4");
+    let icon5 = document.getElementById("icon5");
+    console.log(dayOne);
 
     current1.innerHTML = "  " + dayOne[0].main.temp + " °C";
     current2.innerHTML = "  " + dayTwo[0].main.temp + " °C";
@@ -62,6 +69,27 @@ function getWeather() {
     wind3.innerHTML = "  " + dayThree[0].wind.speed + " Km/h";
     wind4.innerHTML = "  " + dayFour[0].wind.speed + " Km/h";
     wind5.innerHTML = "  " + dayFive[0].wind.speed + " Km/h";
+
+    icon1.src =
+      "http://openweathermap.org/img/wn/" +
+      dayOne[0].weather[0].icon +
+      "@2x.png";
+    icon2.src =
+      "http://openweathermap.org/img/wn/" +
+      dayTwo[0].weather[0].icon +
+      "@2x.png";
+    icon3.src =
+      "http://openweathermap.org/img/wn/" +
+      dayThree[0].weather[0].icon +
+      "@2x.png";
+    icon4.src =
+      "http://openweathermap.org/img/wn/" +
+      dayFour[0].weather[0].icon +
+      "@2x.png";
+    icon5.src =
+      "http://openweathermap.org/img/wn/" +
+      dayFive[0].weather[0].icon +
+      "@2x.png";
   });
 }
 getWeather();
