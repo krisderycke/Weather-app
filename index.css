@@ -35,6 +35,9 @@ body {
   color: white;
   background-color: rgba(88, 75, 75, 0.554);
 }
+::placeholder {
+  color: white;
+}
 
 #searchicon {
   border-radius: 50%;
