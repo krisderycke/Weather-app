@@ -11,8 +11,9 @@ body {
 }
 .searchContainer {
   width: auto;
-  max-width: 1280px;
+  max-width: 1355px;
   margin-top: 25px;
+  margin-right: 0;
   margin-left: 0px;
   padding-left: 25px;
   flex-direction: row;
@@ -49,7 +50,7 @@ body {
 .container {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -57,17 +58,17 @@ body {
   justify-content: center;
 }
 .result {
-  width: 150px;
+  width: 200px;
   min-height: 100px;
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
   display: flex;
-  color: white;
-  /* float: left; */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: black;
+  /* background: url("../Assets/Pics/04d.jpg"); */
+  background-size: cover !important;
+  background-position: left !important;
+  background-repeat: no-repeat !important;
   filter: opacity(0.9);
 }
 .list {
@@ -77,11 +78,16 @@ i {
   width: 10px;
 }
 li {
-  padding: 10px;
-  width: 100px;
+  padding: 10px 5px;
+
+  width: 102px;
   display: flex;
   justify-content: space-around;
+  background-color: gray;
 }
-.fa.fa-wind {
-  padding-right: 22px;
+span {
+  width: 25px;
 }
+/* .fa.fa-wind {
+  padding-right: px;
+} */

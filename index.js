@@ -86,7 +86,7 @@ function getWeather() {
       for (let i = 0; i < winds.length; i++) {
         winds[i].innerHTML = "  " + week[i].wind.speed + " Km/h";
       }
-
+      // show weather icosn in divs
       let icons = document.getElementsByClassName("icon");
       for (let i = 0; i < icons.length; i++) {
         icons[i].src =
@@ -101,9 +101,9 @@ function getWeather() {
       for (let i = 0; i < results.length; i++) {
         console.log(results[i]);
         console.log(week[i]);
-        let icon = week[i].weather[0].icon;
-        console.log(icon);
-        switch (icon) {
+        let iconCode = week[i].weather[0].icon;
+        console.log(iconCode);
+        switch (iconCode) {
           case "01d":
             results[i].style.background = "url('../Assets/Pics/01d.jpg')";
             break;
