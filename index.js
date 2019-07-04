@@ -52,11 +52,13 @@ function getWeather() {
     dayFive.push(week[4]);
     console.log(week);
 
-    let current1 = document.getElementById("current1");
-    let current2 = document.getElementById("current2");
-    let current3 = document.getElementById("current3");
-    let current4 = document.getElementById("current4");
-    let current5 = document.getElementById("current5");
+    // let current1 = document.getElementById("current1");
+    // let current2 = document.getElementById("current2");
+    // let current3 = document.getElementById("current3");
+    // let current4 = document.getElementById("current4");
+    // let current5 = document.getElementById("current5");
+    let currents = document.getElementsByClassName("current");
+
     let wind1 = document.getElementById("wind1");
     let wind2 = document.getElementById("wind2");
     let wind3 = document.getElementById("wind3");
