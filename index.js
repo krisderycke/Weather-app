@@ -24,7 +24,7 @@ function getWeather() {
   let button = document.getElementById("search");
   button.addEventListener("click", async function(e) {
     let city = document.getElementById("input").value;
-    let link = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${key}&unit=metrics`;
+    let link = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${key}`;
     let response = await axios.get(link);
     let backgroundPicture = `https://api.unsplash.com/search/photos?client_id=14ae078181c4ac0c05e7c214aa7f14a9d0351d246345edf147276c0b60ce8cea&page=1&query=${city}`;
     let responseBg = await axios.get(backgroundPicture);
