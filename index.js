@@ -68,17 +68,22 @@ function getWeather() {
       currents[i].innerHTML = "  " + week[i].main.temp_max + " °C";
     }
 
-    let wind1 = document.getElementById("wind1");
-    let wind2 = document.getElementById("wind2");
-    let wind3 = document.getElementById("wind3");
-    let wind4 = document.getElementById("wind4");
-    let wind5 = document.getElementById("wind5");
+    // let wind1 = document.getElementById("wind1");
+    // let wind2 = document.getElementById("wind2");
+    // let wind3 = document.getElementById("wind3");
+    // let wind4 = document.getElementById("wind4");
+    // let wind5 = document.getElementById("wind5");
 
-    wind1.innerHTML = "  " + dayOne[0].wind.speed + " Km/h";
-    wind2.innerHTML = "  " + dayTwo[0].wind.speed + " Km/h";
-    wind3.innerHTML = "  " + dayThree[0].wind.speed + " Km/h";
-    wind4.innerHTML = "  " + dayFour[0].wind.speed + " Km/h";
-    wind5.innerHTML = "  " + dayFive[0].wind.speed + " Km/h";
+    // wind1.innerHTML = "  " + dayOne[0].wind.speed + " Km/h";
+    // wind2.innerHTML = "  " + dayTwo[0].wind.speed + " Km/h";
+    // wind3.innerHTML = "  " + dayThree[0].wind.speed + " Km/h";
+    // wind4.innerHTML = "  " + dayFour[0].wind.speed + " Km/h";
+    // wind5.innerHTML = "  " + dayFive[0].wind.speed + " Km/h";
+    // console.log(week[i].wind.speed);
+    let winds = document.getElementsByClassName("wind");
+    for (let i = 0; i < winds.length; i++) {
+      winds[i].innerHTML = "  " + week[i].wind.speed + " Km/h";
+    }
 
     let icons = document.getElementsByClassName("icon");
     for (let i = 0; i < icons.length; i++) {
