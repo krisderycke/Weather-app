@@ -34,7 +34,7 @@ function getWeather() {
         responseBg.data.results[Math.floor(Math.random() * 10)].urls.full;
       document.body.style.backgroundImage = `url('${background}')`;
       console.log(background);
-      console.log(response);
+      console.log(responseBg);
 
       const week = [];
       const dayOne = [];
