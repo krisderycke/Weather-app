@@ -94,6 +94,45 @@ function getWeather() {
           week[i].weather[0].icon +
           "@2x.png";
       }
+
+      // change background of divs in corresponding weather conditions
+      let results = document.getElementsByClassName("result");
+      console.log(results);
+      for (let i = 0; i < results.length; i++) {
+        console.log(results[i]);
+        console.log(week[i]);
+        let icon = week[i].weather[0].icon;
+        console.log(icon);
+        switch (icon) {
+          case "01d":
+            results[i].style.background = "url('../Assets/Pics/01d.jpg')";
+            break;
+          case "02d":
+            results[i].style.background = "url('../Assets/Pics/02d.jpg')";
+            break;
+          case "03d":
+            results[i].style.background = "url('../Assets/Pics/03d.jpg')";
+            break;
+          case "04d":
+            results[i].style.background = "url('../Assets/Pics/04d.jpg')";
+            break;
+          case "04d":
+            results[i].style.background = "url('../Assets/Pics/04d.jpg')";
+            break;
+          case "09d" || "10d":
+            results[i].style.background = "url('../Assets/Pics/09-10d.jpg')";
+            break;
+          case "11d":
+            results[i].style.background = "url('../Assets/Pics/11d.jpg')";
+            break;
+          case "13d":
+            results[i].style.background = "url('../Assets/Pics/13d.jpg')";
+            break;
+          case "50d":
+            results[i].style.background = "url('../Assets/Pics/50d.jpg')";
+            break;
+        }
+      }
     }
   });
 }
