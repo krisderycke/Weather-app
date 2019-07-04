@@ -5,9 +5,9 @@
 body {
   font-family: "Montserrat", sans-serif;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .searchContainer {
   width: auto;
