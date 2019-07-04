@@ -59,26 +59,25 @@ body {
 .result {
   width: 150px;
   min-height: 100px;
-  background-color: rgba(88, 75, 75, 0.7);
   border: 1px solid black;
+  border-radius: 5px;
   margin: 10px;
   display: flex;
   color: white;
-  float: left;
-  background-size: cover;
+  /* float: left; */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   filter: opacity(0.9);
 }
 .list {
   list-style: none;
-  padding: 10px;
 }
 i {
   width: 10px;
 }
 li {
-  padding: 20px;
+  padding: 10px;
   width: 100px;
   display: flex;
   justify-content: space-around;

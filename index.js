@@ -107,28 +107,41 @@ function getWeather() {
           case "01d":
             results[i].style.background = "url('../Assets/Pics/01d.jpg')";
             break;
+          case "01n":
+            results[i].style.background = "url('../Assets/Pics/01n.jpg')";
+            break;
           case "02d":
             results[i].style.background = "url('../Assets/Pics/02d.jpg')";
+            break;
+          case "02n":
+            results[i].style.background = "url('../Assets/Pics/02n.jpg')";
             break;
           case "03d":
             results[i].style.background = "url('../Assets/Pics/03d.jpg')";
             break;
-          case "04d":
-            results[i].style.background = "url('../Assets/Pics/04d.jpg')";
+          case "03n":
+            results[i].style.background = "url('../Assets/Pics/02n.jpg')";
             break;
           case "04d":
+          case "04n":
             results[i].style.background = "url('../Assets/Pics/04d.jpg')";
             break;
-          case "09d" || "10d":
+          case "09d":
+          case "10d":
+          case "09n":
+          case "10n":
             results[i].style.background = "url('../Assets/Pics/09-10d.jpg')";
             break;
           case "11d":
+          case "11n":
             results[i].style.background = "url('../Assets/Pics/11d.jpg')";
             break;
           case "13d":
+          case "13n":
             results[i].style.background = "url('../Assets/Pics/13d.jpg')";
             break;
           case "50d":
+          case "50n":
             results[i].style.background = "url('../Assets/Pics/50d.jpg')";
             break;
         }
