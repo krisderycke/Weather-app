@@ -57,19 +57,22 @@ function getWeather() {
     // let current3 = document.getElementById("current3");
     // let current4 = document.getElementById("current4");
     // let current5 = document.getElementById("current5");
+
+    // current1.innerHTML = "  " + dayOne[0].main.temp_max + " °C";
+    // current2.innerHTML = "  " + dayTwo[0].main.temp_max + " °C";
+    // current3.innerHTML = "  " + dayThree[0].main.temp_max + " °C";
+    // current4.innerHTML = "  " + dayFour[0].main.temp_max + " °C";
+    // current5.innerHTML = "  " + dayFive[0].main.temp_max + " °C";
     let currents = document.getElementsByClassName("current");
+    for (let i = 0; i < currents.length; i++) {
+      currents[i].innerHTML = "  " + week[i].main.temp_max + " °C";
+    }
 
     let wind1 = document.getElementById("wind1");
     let wind2 = document.getElementById("wind2");
     let wind3 = document.getElementById("wind3");
     let wind4 = document.getElementById("wind4");
     let wind5 = document.getElementById("wind5");
-
-    current1.innerHTML = "  " + dayOne[0].main.temp_max + " °C";
-    current2.innerHTML = "  " + dayTwo[0].main.temp_max + " °C";
-    current3.innerHTML = "  " + dayThree[0].main.temp_max + " °C";
-    current4.innerHTML = "  " + dayFour[0].main.temp_max + " °C";
-    current5.innerHTML = "  " + dayFive[0].main.temp_max + " °C";
 
     wind1.innerHTML = "  " + dayOne[0].wind.speed + " Km/h";
     wind2.innerHTML = "  " + dayTwo[0].wind.speed + " Km/h";
