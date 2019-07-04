@@ -34,15 +34,6 @@ function getWeather() {
     console.log(background);
     console.log(response);
 
-    //console.log(response.data.list);
-    // console.log(response.data.list[0].main);
-    // console.log(response.data.list[0].main.temp);
-    // console.log(response.data.list[8].main.temp);
-    // console.log(response.data.list[16].main.temp);
-    // console.log(response.data.list[24].main.temp);
-    // console.log(response.data.list[32].main.temp);
-    // let weather = response.data.list[0].main;
-
     const week = [];
     const dayOne = [];
     const dayTwo = [];
@@ -71,12 +62,6 @@ function getWeather() {
     let wind3 = document.getElementById("wind3");
     let wind4 = document.getElementById("wind4");
     let wind5 = document.getElementById("wind5");
-    let icon1 = document.getElementById("icon1");
-    let icon2 = document.getElementById("icon2");
-    let icon3 = document.getElementById("icon3");
-    let icon4 = document.getElementById("icon4");
-    let icon5 = document.getElementById("icon5");
-    console.log(dayOne);
 
     current1.innerHTML = "  " + dayOne[0].main.temp_max + " °C";
     current2.innerHTML = "  " + dayTwo[0].main.temp_max + " °C";
@@ -90,26 +75,13 @@ function getWeather() {
     wind4.innerHTML = "  " + dayFour[0].wind.speed + " Km/h";
     wind5.innerHTML = "  " + dayFive[0].wind.speed + " Km/h";
 
-    icon1.src =
-      "https://openweathermap.org/img/wn/" +
-      dayOne[0].weather[0].icon +
-      "@2x.png";
-    icon2.src =
-      "https://openweathermap.org/img/wn/" +
-      dayTwo[0].weather[0].icon +
-      "@2x.png";
-    icon3.src =
-      "https://openweathermap.org/img/wn/" +
-      dayThree[0].weather[0].icon +
-      "@2x.png";
-    icon4.src =
-      "https://openweathermap.org/img/wn/" +
-      dayFour[0].weather[0].icon +
-      "@2x.png";
-    icon5.src =
-      "https://openweathermap.org/img/wn/" +
-      dayFive[0].weather[0].icon +
-      "@2x.png";
+    let icons = document.getElementsByClassName("icon");
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].src =
+        "https://openweathermap.org/img/wn/" +
+        week[i].weather[0].icon +
+        "@2x.png";
+    }
   });
 }
 getWeather();
