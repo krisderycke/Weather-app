@@ -31,7 +31,7 @@ function getWeather() {
       let backgroundPicture = `https://api.unsplash.com/search/photos?client_id=14ae078181c4ac0c05e7c214aa7f14a9d0351d246345edf147276c0b60ce8cea&page=1&query=${city}`;
       let responseBg = await axios.get(backgroundPicture);
       let background =
-        responseBg.data.results[Math.floor(Math.random() * 10)].urls.full;
+        responseBg.data.results[Math.floor(Math.random() * 10)].urls.regular;
       document.body.style.backgroundImage = `url('${background}')`;
       console.log(background);
       console.log(responseBg);
@@ -90,9 +90,9 @@ function getWeather() {
       let icons = document.getElementsByClassName("icon");
       for (let i = 0; i < icons.length; i++) {
         icons[i].src =
-          "https://openweathermap.org/img/wn/" +
+          "https://openweathermap.org/img/w/" +
           week[i].weather[0].icon +
-          "@2x.png";
+          ".png";
       }
 
       // change background of divs in corresponding weather conditions

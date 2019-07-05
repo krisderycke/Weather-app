@@ -26,7 +26,8 @@ body {
 }
 
 .header {
-  color: rgb(251, 231, 231);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 #search {
   padding: 5px;
@@ -65,7 +66,7 @@ body {
   margin: 10px;
   display: flex;
   color: black;
-  box-shadow: 2px 2px 4px 4px rgb(31, 28, 28);
+  box-shadow: 2px 2px 4px rgb(153, 151, 151);
   /* background: url("../Assets/Pics/04d.jpg"); */
   background-size: cover !important;
   background-position: left !important;
