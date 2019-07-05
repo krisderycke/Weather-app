@@ -108,7 +108,7 @@ function getWeather() {
             results[i].style.background = "url('Assets/Pics/01d.jpg')";
             break;
           case "01n":
-            results[i].style.background = "url('Assets/Pics/01n.jpg')";
+            results[i].style.background = "url('./Assets/Pics/01n.jpg')";
             break;
           case "02d":
             results[i].style.background = "url('Assets/Pics/02d.jpg')";
